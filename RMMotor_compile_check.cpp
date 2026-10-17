@@ -35,6 +35,7 @@ void CompilePublicInterface() {
   motor_1.ClearError();
   motor_1.SaveZeroPoint();
   (void)motor_1.Update();
+  motor_1.OnMonitor();
   (void)motor_1.GetFeedback();
   (void)motor_1.GetOmega();
   motor_1.Control({.mode = Motor::ControlMode::MODE_CURRENT, .velocity = 0.0f});

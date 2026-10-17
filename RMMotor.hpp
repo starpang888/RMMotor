@@ -460,6 +460,12 @@ class RMMotor : public Motor
   }
 
   /**
+   * @brief XRobot monitor hook: refresh feedback without sending a command.
+   *        XRobot 监控钩子：更新反馈，不发送控制命令。
+   */
+  void OnMonitor() { static_cast<void>(Update()); }
+
+  /**
    * @brief 获取最近一次解码得到的反馈。
    *        Get the most recently decoded feedback.
    *
